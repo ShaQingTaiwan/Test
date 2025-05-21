@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「沙青」品牌受眾深度訪談問卷</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #6B8E23; /* 橄欖綠/豆沙綠 - 主題色 */
+            --secondary-color: #F5F5DC; /* 米白 - 背景/輔助色 */
+            --accent-color: #D2B48C; /* 譚色/淺木色 - 點綴/按鈕 */
+            --text-color: #333333;
+            --light-text-color: #FFFFFF;
+            --font-family: 'Noto Sans TC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --heading-font: 'Noto Serif TC', 'Times New Roman', serif;
+            --input-bg-color: #fff;
+            --input-border-color: #ccc;
+            --container-bg-color: #fdfdfa;
+            --form-bg-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color); /* 整個頁面的背景色 */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* 改為 flex-start 以允許滾動 */
+            min-height: 100vh;
+        }
+
+        .survey-container {
+            background-color: var(--form-bg-color);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px; /* 增加頂部間距 */
+            margin-bottom: 20px; /* 增加底部間距 */
+        }
+
+        .survey-header h1 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .survey-header .brand-intro {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            white-space: pre-line; /* 保留換行符 */
+        }
+
+        .survey-header .form-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--heading-font);
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group .help-text {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--input-border-color);
+            border-radius: 6px;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            min-height: 120px;
+            resize: vertical; /* 允許垂直調整大小 */
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(107, 142, 35, 0.2);
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: var(--accent-color);
+            color: var(--light-text-color);
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .submit-button:hover {
+            background-color: #c5a378; /* Darken accent color */
+            transform: translateY(-2px);
+        }
+
+        .confirmation-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #e6ffe6; /* 淡綠色背景 */
+            color: #006400; /* 深綠色文字 */
+            border: 1px solid #b3ffb3;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none; /* 初始隱藏 */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .survey-container {
+                padding: 20px;
+            }
+            .survey-header h1 {
+                font-size: 1.8rem;
+            }
+            .form-group label {
+                font-size: 1.1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdV6-UoG-BWhIgkSS2dd6z2xaPxCgVD58owa9Y_0g_e7h2v3A/formResponse"METHOD="POST">  
+    <div class="survey-container">
+        <div class="survey-header">
+            <h1>「沙青」品牌受眾深度訪談問卷</h1>
+            <p class="brand-intro">
+您好！我們是「沙青」，一個專注於綠豆沙鮮奶冰沙與綠豆沙的單品職人品牌。
+「沙青」強調細沙慢磨的手工技藝與新鮮小農鮮奶，希望能傳遞文青美學與極致濃郁的口感體驗。
+            </p>
+            <p class="form-description">
+這份問卷希望能更深入了解您的生活與想法，以提供更貼近您需求的產品與體驗。您的回答對我們非常重要，感謝您的寶貴時間！
+            </p>
+        </div>
+
+        <form id="shaQingSurveyForm">
+            <div class="form-group">
+                <label for="q1">1. 日常小確幸探尋</label>
+                <p class="help-text">在忙碌的一天結束後，或是在悠閒的週末，通常是什麼樣的「小事物」或「片刻」能讓您感到特別放鬆、愉悅或被療癒？能否分享一個最近讓您感到「啊，真好」的瞬間？</p>
+                <textarea id="q1" name="entry.742872664" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q2">2. 飲食偏好與價值</label>
+                <p class="help-text">當您選擇日常飲品或點心時，除了口味本身，您還會特別在意哪些面向？（例如：食材來源、製作方式、健康價值、包裝美感、品牌故事等）哪些元素對您來說是「必要條件」，哪些是「加分項」？</p>
+                <textarea id="q2" name="entry.1081506130" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q3">3. 生活美學的體現</label>
+                <p class="help-text">您如何定義自己的「生活美學」？這種美學觀是如何體現在您的日常選擇中，比如您喜歡的空間、物品、衣著風格，或是您追蹤的社群帳號類型？</p>
+                <textarea id="q3" name="entry.1417044773" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q4">4. 對「職人精神」的看法</label>
+                <p class="help-text">「沙青」強調「單品職人」與「手工技藝」。您對「職人精神」有什麼樣的理解或感受？在您的消費經驗中，是否有因為感受到這種精神而特別被打動的品牌或店家？</p>
+                <textarea id="q4" name="entry.133581374" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q5">5. 尋找「慢」的時刻</label>
+                <p class="help-text">在現代快節奏的生活中，您會如何刻意為自己創造「慢下來」的時刻？這些時刻對您而言有什麼樣的意義？</p>
+                <textarea id="q5" name="entry.1478894519" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q6">6. 品牌故事與連結</label>
+                <p class="help-text">對您而言，一個飲品品牌的故事或理念，在多大程度上會影響您的購買意願和品牌忠誠度？什麼樣的故事或價值觀最能觸動您？</p>
+                <textarea id="q6" name="entry.526024546" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q7">7. 對「純粹」與「簡單」的追求</label>
+                <p class="help-text">「沙青」品牌理念中提到「越簡單，越不簡單」。在飲食或生活其他方面，您是否也有類似的追求？能否分享您對「純粹」和「簡單即美好」的看法？</p>
+                <textarea id="q7" name="entry.266371034" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q8">8. 社群參與及資訊獲取</label>
+                <p class="help-text">您平時喜歡在哪些社群平台瀏覽內容？什麼類型的貼文或分享最能吸引您的注意，甚至讓您願意互動或分享？</p>
+                <textarea id="q8" name="entry.1695869855" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q9">9. 消費體驗的期待</label>
+                <p class="help-text">當您光顧一家像「沙青」這樣強調質感和體驗的飲品店時，除了產品本身，您對整體的消費體驗（如店面氛圍、服務、包裝等）有哪些期待？</p>
+                <textarea id="q9" name="entry.15438621" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="q10">10. 理想的飲品伴侶</label>
+                <p class="help-text">如果「沙青」的綠豆沙鮮奶冰沙是您生活中的一位「飲品伴侶」，您希望它在什麼樣的情境下陪伴您？它能為您帶來什麼樣的感受或支持？</p>
+                <textarea id="q10" name="entry.743061229" rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">提交問卷</button>
+        </form>
+        <div id="confirmationMessage" class="confirmation-message">
+            感謝您的填寫！您的寶貴意見已成功送出。
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('shaQingSurveyForm');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // 防止表單的預設提交行為
+
+                // 在這裡，您可以添加將表單數據發送到服務器的代碼
+                // 例如使用 Fetch API:
+                /*
+                const formData = new FormData(form);
+                fetch('/your-server-endpoint', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    confirmationMessage.style.display = 'block'; // 顯示成功訊息
+                    form.reset(); // 清空表單
+                    form.style.display = 'none'; // 隱藏表單
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('提交失敗，請稍後再試。');
+                });
+                */
+
+                // 目前僅作為前端展示，顯示成功訊息並清空表單
+                confirmationMessage.style.display = 'block';
+                form.reset();
+                // 可以選擇隱藏表單，讓確認訊息更突出
+                // form.style.display = 'none';
+
+                // 自動滾動到確認訊息
+                confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+
+                // 幾秒後可以選擇隱藏確認訊息
+                /*
+                setTimeout(() => {
+                    confirmationMessage.style.display = 'none';
+                    // 如果隱藏了表單，可以選擇重新顯示
+                    // form.style.display = 'block';
+                }, 5000); // 5秒後隱藏
+                */
+            });
+        });
+    </script>
+</body>
+</html>
